@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JB Krisna A\\source\\repos\\userForm\\userForm\\userForm.csproj": {}
+    "C:\\Users\\Haikal Hilmi\\Source\\Repos\\VirtualCheck\\userForm\\userForm.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JB Krisna A\\source\\repos\\userForm\\userForm\\userForm.csproj": {
+    "C:\\Users\\Haikal Hilmi\\Source\\Repos\\VirtualCheck\\userForm\\userForm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JB Krisna A\\source\\repos\\userForm\\userForm\\userForm.csproj",
+        "projectUniqueName": "C:\\Users\\Haikal Hilmi\\Source\\Repos\\VirtualCheck\\userForm\\userForm.csproj",
         "projectName": "userForm",
-        "projectPath": "C:\\Users\\JB Krisna A\\source\\repos\\userForm\\userForm\\userForm.csproj",
-        "packagesPath": "C:\\Users\\JB Krisna A\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JB Krisna A\\source\\repos\\userForm\\userForm\\obj\\",
+        "projectPath": "C:\\Users\\Haikal Hilmi\\Source\\Repos\\VirtualCheck\\userForm\\userForm.csproj",
+        "packagesPath": "C:\\Users\\Haikal Hilmi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Haikal Hilmi\\Source\\Repos\\VirtualCheck\\userForm\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\JB Krisna A\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Haikal Hilmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -62,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
