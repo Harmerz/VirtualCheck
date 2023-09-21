@@ -1,0 +1,16 @@
+C:\Users\haika\Source\Repos\VirtualCheck\userForm\bin\Debug\net6.0-windows\userForm.exe
+C:\Users\haika\Source\Repos\VirtualCheck\userForm\bin\Debug\net6.0-windows\userForm.deps.json
+C:\Users\haika\Source\Repos\VirtualCheck\userForm\bin\Debug\net6.0-windows\userForm.runtimeconfig.json
+C:\Users\haika\Source\Repos\VirtualCheck\userForm\bin\Debug\net6.0-windows\userForm.dll
+C:\Users\haika\Source\Repos\VirtualCheck\userForm\bin\Debug\net6.0-windows\userForm.pdb
+C:\Users\haika\Source\Repos\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.Form1.resources
+C:\Users\haika\Source\Repos\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.csproj.GenerateResource.cache
+C:\Users\haika\Source\Repos\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\haika\Source\Repos\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.AssemblyInfoInputs.cache
+C:\Users\haika\Source\Repos\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.AssemblyInfo.cs
+C:\Users\haika\Source\Repos\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.csproj.CoreCompileInputs.cache
+C:\Users\haika\Source\Repos\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.dll
+C:\Users\haika\Source\Repos\VirtualCheck\userForm\obj\Debug\net6.0-windows\refint\userForm.dll
+C:\Users\haika\Source\Repos\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.pdb
+C:\Users\haika\Source\Repos\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.genruntimeconfig.cache
+C:\Users\haika\Source\Repos\VirtualCheck\userForm\obj\Debug\net6.0-windows\ref\userForm.dll
