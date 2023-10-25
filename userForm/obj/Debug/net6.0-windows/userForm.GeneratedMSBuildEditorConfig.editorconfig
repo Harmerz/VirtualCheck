@@ -1,6 +1,6 @@
 is_global = true
 build_property.ApplicationManifest = 
-build_property.StartupObject = 
+build_property.StartupObject = userForm.Program
 build_property.ApplicationDefaultFont = 
 build_property.ApplicationHighDpiMode = 
 build_property.ApplicationUseCompatibleTextRendering = 
@@ -14,4 +14,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = userForm
-build_property.ProjectDir = C:\Users\JB Krisna Arianta\Source\Repos\VirtualCheck\userForm\
+build_property.ProjectDir = D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\

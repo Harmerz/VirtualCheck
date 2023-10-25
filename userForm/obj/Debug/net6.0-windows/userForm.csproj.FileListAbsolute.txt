@@ -14,3 +14,21 @@ C:\Users\haika\Source\Repos\VirtualCheck\userForm\obj\Debug\net6.0-windows\refin
 C:\Users\haika\Source\Repos\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.pdb
 C:\Users\haika\Source\Repos\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.genruntimeconfig.cache
 C:\Users\haika\Source\Repos\VirtualCheck\userForm\obj\Debug\net6.0-windows\ref\userForm.dll
+D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\bin\Debug\net6.0-windows\userForm.exe
+D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\bin\Debug\net6.0-windows\userForm.deps.json
+D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\bin\Debug\net6.0-windows\userForm.runtimeconfig.json
+D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\bin\Debug\net6.0-windows\userForm.dll
+D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\bin\Debug\net6.0-windows\userForm.pdb
+D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.FormDokter.resources
+D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.FormLogin.resources
+D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.FormPasien.resources
+D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.csproj.GenerateResource.cache
+D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.GeneratedMSBuildEditorConfig.editorconfig
+D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.AssemblyInfoInputs.cache
+D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.AssemblyInfo.cs
+D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.csproj.CoreCompileInputs.cache
+D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.dll
+D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\obj\Debug\net6.0-windows\refint\userForm.dll
+D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.pdb
+D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\obj\Debug\net6.0-windows\userForm.genruntimeconfig.cache
+D:\1. kuliah dulu bro\SEMESTER 5\JUNPRO\VirtualCheck\userForm\obj\Debug\net6.0-windows\ref\userForm.dll

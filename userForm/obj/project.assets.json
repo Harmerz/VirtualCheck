@@ -8,19 +8,40 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
+<<<<<<< Updated upstream
     "C:\\Users\\haika\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\JB Krisna A\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+>>>>>>> Stashed changes
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
       "projectUniqueName": "C:\\Users\\haika\\Source\\Repos\\VirtualCheck\\userForm\\userForm.csproj",
       "projectName": "userForm",
       "projectPath": "C:\\Users\\haika\\Source\\Repos\\VirtualCheck\\userForm\\userForm.csproj",
       "packagesPath": "C:\\Users\\haika\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\haika\\Source\\Repos\\VirtualCheck\\userForm\\obj\\",
+=======
+      "projectUniqueName": "D:\\1. kuliah dulu bro\\SEMESTER 5\\JUNPRO\\VirtualCheck\\userForm\\userForm.csproj",
+      "projectName": "userForm",
+      "projectPath": "D:\\1. kuliah dulu bro\\SEMESTER 5\\JUNPRO\\VirtualCheck\\userForm\\userForm.csproj",
+      "packagesPath": "C:\\Users\\JB Krisna A\\.nuget\\packages\\",
+      "outputPath": "D:\\1. kuliah dulu bro\\SEMESTER 5\\JUNPRO\\VirtualCheck\\userForm\\obj\\",
+>>>>>>> Stashed changes
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
+<<<<<<< Updated upstream
         "C:\\Users\\haika\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\JB Krisna A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> Stashed changes
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

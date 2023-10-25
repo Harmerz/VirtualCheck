@@ -10,8 +10,8 @@ namespace userForm
     {
         private int _idAdmin;
         private char[] _nameAdmin;
-        private char[] _usernameAdmin;
-        private char[] _passwordAdmin;
+        private string _usernameAdmin;
+        private string _passwordAdmin;
         private char[] _tempatAdmin;
 
         public int IDAdmin
@@ -25,12 +25,12 @@ namespace userForm
             set { _nameAdmin = value; }
         }
 
-        public char[] UsernameAdmin
+        public string UsernameAdmin
         {
             get { return _usernameAdmin; }
             set { _usernameAdmin = value; }
         }
-        public char[] PasswordAdmin
+        public string PasswordAdmin
         {
             get { return _passwordAdmin; }
             set { _usernameAdmin = value; }
