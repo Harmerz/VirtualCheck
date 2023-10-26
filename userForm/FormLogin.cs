@@ -20,18 +20,35 @@ namespace userForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
-            admin.UsernameAdmin = textBox1.Text;
-            admin.PasswordAdmin = textBox2.Text;    
-            if (admin.LoginAdmin(admin.UsernameAdmin, admin.PasswordAdmin))
+            string Role = Login.HandleLogin(textBox1.Text, textBox2.Text);
+
+            if (Role == "Admin" || Role == "Dokter")
             {
                 MessageBox.Show("Masuk bro");
+                if (Role == "Dokter")
+                {
+                    FormDokter formDokter = new();
+                    formDokter.Show();
+                }
+
             }
             else
             {
                 MessageBox.Show("Gagal bro");
             }
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonPasien_Click(object sender, EventArgs e)
+        {
+            Close();
+            FormPasien formPasien = new();
+            formPasien.Show();
         }
     }
 }

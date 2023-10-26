@@ -41,7 +41,7 @@ namespace userForm
             set { _tempatAdmin = value; }
         }
 
-        public Boolean LoginAdmin(string username, string password)
+        public static Boolean LoginAdmin(string username, string password)
         {
             if (username == null || password == null)
             {

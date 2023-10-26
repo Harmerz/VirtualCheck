@@ -43,7 +43,7 @@ namespace userForm
             set { _jadwalDokter = value; }
         }
 
-        public Boolean LoginDokter(string username, string password)
+        public static Boolean LoginDokter(string username, string password)
         {
             if (username == null || password == null)
             {
