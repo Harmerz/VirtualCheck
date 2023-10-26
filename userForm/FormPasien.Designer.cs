@@ -42,6 +42,7 @@
             label6 = new Label();
             textBox5 = new TextBox();
             label7 = new Label();
+            btnLogOutPasien = new Button();
             SuspendLayout();
             // 
             // button1
@@ -164,11 +165,22 @@
             label7.Text = "Form Data Diri dan Keluhan";
             label7.TextAlign = ContentAlignment.TopCenter;
             // 
+            // btnLogOutPasien
+            // 
+            btnLogOutPasien.Location = new Point(531, 1116);
+            btnLogOutPasien.Name = "btnLogOutPasien";
+            btnLogOutPasien.Size = new Size(310, 46);
+            btnLogOutPasien.TabIndex = 15;
+            btnLogOutPasien.Text = "Log Out";
+            btnLogOutPasien.UseVisualStyleBackColor = true;
+            btnLogOutPasien.Click += btnLogOutPasien_Click_1;
+            // 
             // FormPasien
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1374, 1146);
+            ClientSize = new Size(1374, 1245);
+            Controls.Add(btnLogOutPasien);
             Controls.Add(label7);
             Controls.Add(textBox5);
             Controls.Add(label6);
@@ -205,5 +217,6 @@
         private Label label6;
         private TextBox textBox5;
         private Label label7;
+        private Button btnLogOutPasien;
     }
 }

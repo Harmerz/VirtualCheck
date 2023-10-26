@@ -21,5 +21,10 @@ namespace userForm
         {
 
         }
+
+        private void btnLogOutDokter_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

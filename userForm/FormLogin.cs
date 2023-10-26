@@ -27,18 +27,20 @@ namespace userForm
                 MessageBox.Show("Masuk bro");
                 if (Role == "Dokter")
                 {
+                    Close();
                     FormDokter formDokter = new();
                     formDokter.Show();
                 }
 
-                textBox1.Text = "";
-                textBox2.Text = "";
-
                 if (Role == "Admin")
                 {
+                    Close();
                     FormAdmin formAdmin = new();
                     formAdmin.Show();
                 }
+
+                textBox1.Text = "";
+                textBox2.Text = "";
             }
             else
             {
