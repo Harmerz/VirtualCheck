@@ -33,6 +33,12 @@ namespace userForm
 
                 textBox1.Text = "";
                 textBox2.Text = "";
+
+                if (Role == "Admin")
+                {
+                    FormAdmin formAdmin = new();
+                    formAdmin.Show();
+                }
             }
             else
             {
