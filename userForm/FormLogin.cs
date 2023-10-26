@@ -31,6 +31,8 @@ namespace userForm
                     formDokter.Show();
                 }
 
+                textBox1.Text = "";
+                textBox2.Text = "";
             }
             else
             {

@@ -65,9 +65,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(350, 180);
             label1.Name = "label1";
-            label1.Size = new Size(78, 32);
+            label1.Size = new Size(77, 32);
             label1.TabIndex = 3;
-            label1.Text = "Name";
+            label1.Text = "Nama";
             label1.Click += label1_Click;
             // 
             // label2
@@ -75,27 +75,27 @@
             label2.AutoSize = true;
             label2.Location = new Point(350, 262);
             label2.Name = "label2";
-            label2.Size = new Size(56, 32);
+            label2.Size = new Size(73, 32);
             label2.TabIndex = 4;
-            label2.Text = "Age";
+            label2.Text = "Umur";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(350, 347);
             label3.Name = "label3";
-            label3.Size = new Size(98, 32);
+            label3.Size = new Size(88, 32);
             label3.TabIndex = 5;
-            label3.Text = "Address";
+            label3.Text = "Alamat";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(350, 431);
             label4.Name = "label4";
-            label4.Size = new Size(51, 32);
+            label4.Size = new Size(159, 32);
             label4.TabIndex = 6;
-            label4.Text = "Sex";
+            label4.Text = "Jenis Kelamin";
             // 
             // label5
             // 
@@ -164,7 +164,7 @@
             label7.Text = "Form Data Diri dan Keluhan";
             label7.TextAlign = ContentAlignment.TopCenter;
             // 
-            // Form1
+            // FormPasien
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -183,7 +183,7 @@
             Controls.Add(label1);
             Controls.Add(textBox1);
             Controls.Add(button1);
-            Name = "Form1";
+            Name = "FormPasien";
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
