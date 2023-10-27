@@ -60,5 +60,10 @@ namespace userForm
             FormPasien formPasien = new();
             formPasien.Show();
         }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

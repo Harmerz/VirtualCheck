@@ -11,8 +11,8 @@ namespace userForm
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            FormLogin formLogin = new();
-            formLogin.Show();
+            FormAwal formAwal = new();
+            formAwal.Show();
             Application.Run();
         }
     }
