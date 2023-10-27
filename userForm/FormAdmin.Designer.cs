@@ -33,6 +33,7 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            btnLogOutAdmin = new Button();
             SuspendLayout();
             // 
             // label1
@@ -80,11 +81,22 @@
             button4.Text = "Data Booking";
             button4.UseVisualStyleBackColor = true;
             // 
+            // btnLogOutAdmin
+            // 
+            btnLogOutAdmin.Location = new Point(482, 776);
+            btnLogOutAdmin.Name = "btnLogOutAdmin";
+            btnLogOutAdmin.Size = new Size(299, 82);
+            btnLogOutAdmin.TabIndex = 5;
+            btnLogOutAdmin.Text = "Log Out";
+            btnLogOutAdmin.UseVisualStyleBackColor = true;
+            btnLogOutAdmin.Click += btnLogOutAdmin_Click;
+            // 
             // FormAdmin
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1260, 1065);
+            Controls.Add(btnLogOutAdmin);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -103,5 +115,6 @@
         private Button button2;
         private Button button3;
         private Button button4;
+        private Button btnLogOutAdmin;
     }
 }

@@ -26,5 +26,12 @@ namespace userForm
         {
             this.Close();
         }
+
+        private void btnLogOutDokter_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
+        }
     }
 }

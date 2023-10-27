@@ -33,6 +33,8 @@
             textBox1 = new TextBox();
             label3 = new Label();
             textBox2 = new TextBox();
+            btnSubmit = new Button();
+            btnLogOutDokter = new Button();
             SuspendLayout();
             // 
             // label1
@@ -79,11 +81,32 @@
             textBox2.Size = new Size(484, 200);
             textBox2.TabIndex = 4;
             // 
+            // btnSubmit
+            // 
+            btnSubmit.Location = new Point(563, 974);
+            btnSubmit.Name = "btnSubmit";
+            btnSubmit.Size = new Size(183, 46);
+            btnSubmit.TabIndex = 5;
+            btnSubmit.Text = "Submit";
+            btnSubmit.UseVisualStyleBackColor = true;
+            // 
+            // btnLogOutDokter
+            // 
+            btnLogOutDokter.Location = new Point(563, 1073);
+            btnLogOutDokter.Name = "btnLogOutDokter";
+            btnLogOutDokter.Size = new Size(183, 46);
+            btnLogOutDokter.TabIndex = 6;
+            btnLogOutDokter.Text = "Log Out";
+            btnLogOutDokter.UseVisualStyleBackColor = true;
+            btnLogOutDokter.Click += btnLogOutDokter_Click_1;
+            // 
             // FormDokter
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1349, 1179);
+            Controls.Add(btnLogOutDokter);
+            Controls.Add(btnSubmit);
             Controls.Add(textBox2);
             Controls.Add(label3);
             Controls.Add(textBox1);
@@ -102,5 +125,7 @@
         private TextBox textBox1;
         private Label label3;
         private TextBox textBox2;
+        private Button btnSubmit;
+        private Button btnLogOutDokter;
     }
 }

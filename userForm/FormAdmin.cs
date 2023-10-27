@@ -17,5 +17,11 @@ namespace userForm
             InitializeComponent();
         }
 
+        private void btnLogOutAdmin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
+        }
     }
 }
