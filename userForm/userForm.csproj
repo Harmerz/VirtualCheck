@@ -9,4 +9,8 @@
     <StartupObject>userForm.Program</StartupObject>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="7.0.6" />
+  </ItemGroup>
+
 </Project>
