@@ -21,8 +21,8 @@ namespace userForm
         private void btnLogOutPasien_Click_1(object sender, EventArgs e)
         {
             this.Close();
-            FormLogin formLogin = new FormLogin();
-            formLogin.Show();
+            FormAwal formAwal = new FormAwal();
+            formAwal.Show();
         }
     }
 }

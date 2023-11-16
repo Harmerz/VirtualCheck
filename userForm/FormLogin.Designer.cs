@@ -34,15 +34,15 @@
             label3 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
-            buttonPasien = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(508, 665);
+            button1.Location = new Point(502, 630);
             button1.Margin = new Padding(4, 2, 4, 2);
             button1.Name = "button1";
-            button1.Size = new Size(327, 47);
+            button1.Size = new Size(327, 86);
             button1.TabIndex = 0;
             button1.Text = "Submit";
             button1.UseVisualStyleBackColor = true;
@@ -96,23 +96,22 @@
             textBox2.TabIndex = 5;
             textBox2.UseSystemPasswordChar = true;
             // 
-            // buttonPasien
+            // button2
             // 
-            buttonPasien.Location = new Point(508, 760);
-            buttonPasien.Margin = new Padding(6, 6, 6, 6);
-            buttonPasien.Name = "buttonPasien";
-            buttonPasien.Size = new Size(325, 49);
-            buttonPasien.TabIndex = 6;
-            buttonPasien.Text = "Pasien Form";
-            buttonPasien.UseVisualStyleBackColor = true;
-            buttonPasien.Click += buttonPasien_Click;
+            button2.Location = new Point(502, 877);
+            button2.Name = "button2";
+            button2.Size = new Size(327, 86);
+            button2.TabIndex = 6;
+            button2.Text = "Close";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1320, 1060);
-            Controls.Add(buttonPasien);
+            Controls.Add(button2);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label3);
@@ -135,6 +134,6 @@
         private Label label3;
         private TextBox textBox1;
         private TextBox textBox2;
-        private Button buttonPasien;
+        private Button button2;
     }
 }

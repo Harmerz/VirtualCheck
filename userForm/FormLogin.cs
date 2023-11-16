@@ -54,16 +54,18 @@ namespace userForm
 
         }
 
-        private void buttonPasien_Click(object sender, EventArgs e)
-        {
-            Close();
-            FormPasien formPasien = new();
-            formPasien.Show();
-        }
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormAwal formAwal = new FormAwal();
+            formAwal.Show();
+        }
     }
+
 }
