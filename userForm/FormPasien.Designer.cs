@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            textBox1 = new TextBox();
+            txtNama = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            comboBox1 = new ComboBox();
+            txtUmur = new TextBox();
+            txtAlamat = new TextBox();
+            txtTelp = new TextBox();
+            cbKelamin = new ComboBox();
             label6 = new Label();
-            textBox5 = new TextBox();
+            txtKeluhan = new TextBox();
             label7 = new Label();
             btnLogOutPasien = new Button();
             SuspendLayout();
@@ -55,12 +55,12 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // textBox1
+            // txtNama
             // 
-            textBox1.Location = new Point(654, 180);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(414, 39);
-            textBox1.TabIndex = 2;
+            txtNama.Location = new Point(654, 180);
+            txtNama.Name = "txtNama";
+            txtNama.Size = new Size(414, 39);
+            txtNama.TabIndex = 2;
             // 
             // label1
             // 
@@ -108,34 +108,34 @@
             label5.TabIndex = 7;
             label5.Text = "Telp";
             // 
-            // textBox2
+            // txtUmur
             // 
-            textBox2.Location = new Point(654, 262);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(414, 39);
-            textBox2.TabIndex = 8;
+            txtUmur.Location = new Point(654, 262);
+            txtUmur.Name = "txtUmur";
+            txtUmur.Size = new Size(414, 39);
+            txtUmur.TabIndex = 8;
             // 
-            // textBox3
+            // txtAlamat
             // 
-            textBox3.Location = new Point(654, 347);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(414, 39);
-            textBox3.TabIndex = 9;
+            txtAlamat.Location = new Point(654, 347);
+            txtAlamat.Name = "txtAlamat";
+            txtAlamat.Size = new Size(414, 39);
+            txtAlamat.TabIndex = 9;
             // 
-            // textBox4
+            // txtTelp
             // 
-            textBox4.Location = new Point(654, 512);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(414, 39);
-            textBox4.TabIndex = 10;
+            txtTelp.Location = new Point(654, 512);
+            txtTelp.Name = "txtTelp";
+            txtTelp.Size = new Size(414, 39);
+            txtTelp.TabIndex = 10;
             // 
-            // comboBox1
+            // cbKelamin
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(654, 428);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(414, 40);
-            comboBox1.TabIndex = 11;
+            cbKelamin.FormattingEnabled = true;
+            cbKelamin.Location = new Point(654, 428);
+            cbKelamin.Name = "cbKelamin";
+            cbKelamin.Size = new Size(414, 40);
+            cbKelamin.TabIndex = 11;
             // 
             // label6
             // 
@@ -147,14 +147,14 @@
             label6.Text = "Keluhan";
             label6.Click += label6_Click;
             // 
-            // textBox5
+            // txtKeluhan
             // 
-            textBox5.Location = new Point(654, 601);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.ScrollBars = ScrollBars.Vertical;
-            textBox5.Size = new Size(414, 259);
-            textBox5.TabIndex = 13;
+            txtKeluhan.Location = new Point(654, 601);
+            txtKeluhan.Multiline = true;
+            txtKeluhan.Name = "txtKeluhan";
+            txtKeluhan.ScrollBars = ScrollBars.Vertical;
+            txtKeluhan.Size = new Size(414, 259);
+            txtKeluhan.TabIndex = 13;
             // 
             // label7
             // 
@@ -183,18 +183,18 @@
             ClientSize = new Size(1374, 1245);
             Controls.Add(btnLogOutPasien);
             Controls.Add(label7);
-            Controls.Add(textBox5);
+            Controls.Add(txtKeluhan);
             Controls.Add(label6);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            Controls.Add(cbKelamin);
+            Controls.Add(txtTelp);
+            Controls.Add(txtAlamat);
+            Controls.Add(txtUmur);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(txtNama);
             Controls.Add(button1);
             Name = "FormPasien";
             Text = "Form1";
@@ -205,18 +205,18 @@
         #endregion
 
         private Button button1;
-        private TextBox textBox1;
+        private TextBox txtNama;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private ComboBox comboBox1;
+        private TextBox txtUmur;
+        private TextBox txtAlamat;
+        private TextBox txtTelp;
+        private ComboBox cbKelamin;
         private Label label6;
-        private TextBox textBox5;
+        private TextBox txtKeluhan;
         private Label label7;
         private Button btnLogOutPasien;
     }
