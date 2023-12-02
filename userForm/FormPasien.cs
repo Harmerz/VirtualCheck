@@ -55,9 +55,10 @@ namespace userForm
                 if ((int)cmd.ExecuteScalar() == 1)
                 {
                     MessageBox.Show("Data Users Berhasil diinputkan", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    conn.Close();   
+                    conn.Close();
                     txtNama.Text = txtUmur.Text = txtAlamat.Text = txtTelp.Text = txtKeluhan.Text = null;
-                }else
+                }
+                else
                 {
                     MessageBox.Show("Data gagal di inputkan", "We Are Sorry", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

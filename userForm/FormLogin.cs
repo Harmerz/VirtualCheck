@@ -60,7 +60,12 @@ namespace userForm
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void back_Click(object sender, EventArgs e)
         {
             this.Close();
             FormAwal formAwal = new FormAwal();

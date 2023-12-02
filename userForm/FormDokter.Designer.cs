@@ -39,52 +39,58 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(563, 98);
+            label1.Location = new Point(303, 46);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(183, 32);
+            label1.Size = new Size(92, 15);
             label1.TabIndex = 0;
             label1.Text = "Form Konsultasi";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(288, 204);
+            label2.Location = new Point(155, 96);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(175, 32);
+            label2.Size = new Size(87, 15);
             label2.TabIndex = 1;
             label2.Text = "Keluhan Pasien";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(563, 204);
+            textBox1.Location = new Point(303, 96);
+            textBox1.Margin = new Padding(2, 1, 2, 1);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(484, 434);
+            textBox1.Size = new Size(262, 206);
             textBox1.TabIndex = 2;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(288, 703);
+            label3.Location = new Point(155, 330);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(137, 32);
+            label3.Size = new Size(68, 15);
             label3.TabIndex = 3;
             label3.Text = "Data Pasien";
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(563, 698);
+            textBox2.Location = new Point(303, 327);
+            textBox2.Margin = new Padding(2, 1, 2, 1);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(484, 200);
+            textBox2.Size = new Size(262, 96);
             textBox2.TabIndex = 4;
             // 
             // btnLogOutDokter
             // 
-            btnLogOutDokter.Location = new Point(563, 975);
+            btnLogOutDokter.Location = new Point(303, 457);
+            btnLogOutDokter.Margin = new Padding(2, 1, 2, 1);
             btnLogOutDokter.Name = "btnLogOutDokter";
-            btnLogOutDokter.Size = new Size(183, 46);
+            btnLogOutDokter.Size = new Size(99, 22);
             btnLogOutDokter.TabIndex = 6;
             btnLogOutDokter.Text = "Log Out";
             btnLogOutDokter.UseVisualStyleBackColor = true;
@@ -92,15 +98,16 @@
             // 
             // FormDokter
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1349, 1179);
+            ClientSize = new Size(726, 497);
             Controls.Add(btnLogOutDokter);
             Controls.Add(textBox2);
             Controls.Add(label3);
             Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(2, 1, 2, 1);
             Name = "FormDokter";
             Text = "FormDokter";
             ResumeLayout(false);

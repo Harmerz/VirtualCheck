@@ -47,7 +47,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(286, 479);
+            button1.Location = new Point(286, 443);
             button1.Margin = new Padding(2, 1, 2, 1);
             button1.Name = "button1";
             button1.Size = new Size(167, 22);
@@ -174,7 +174,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(286, 27);
+            label7.Location = new Point(188, 38);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
             label7.Size = new Size(152, 15);
