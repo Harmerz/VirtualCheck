@@ -42,9 +42,11 @@
             btnDeleteDokter = new Button();
             btnUpdateDokter = new Button();
             btnCreateDokter = new Button();
+            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvDataPasien).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvDataDokter).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // btnLogOutAdmin
@@ -227,6 +229,15 @@
             btnCreateDokter.UseVisualStyleBackColor = false;
             btnCreateDokter.Click += btnCreateDokter_Click;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.Hiasan_3;
+            pictureBox2.Location = new Point(0, 403);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(260, 157);
+            pictureBox2.TabIndex = 40;
+            pictureBox2.TabStop = false;
+            // 
             // FormAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -247,12 +258,15 @@
             Controls.Add(label4);
             Controls.Add(pictureBox1);
             Controls.Add(btnLogOutAdmin);
+            Controls.Add(pictureBox2);
             Margin = new Padding(2, 1, 2, 1);
             Name = "FormAdmin";
             Text = "FormAdmin";
+            Load += FormAdmin_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvDataPasien).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvDataDokter).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -272,5 +286,6 @@
         private Button btnDeleteDokter;
         private Button btnUpdateDokter;
         private Button btnCreateDokter;
+        private PictureBox pictureBox2;
     }
 }

@@ -195,5 +195,15 @@ namespace userForm
             this.Close();
             formAddDoctor.ShowDialog();
         }
+
+        private void FormAdmin_Load(object sender, EventArgs e)
+        {
+            // This code will be executed when the FormAdmin is first loaded
+
+            // Call the btnPasien_Click event handler method
+            btnPasien_Click(sender, e);
+            btnDokter_Click(sender, e);
+
+        }
     }
 }
