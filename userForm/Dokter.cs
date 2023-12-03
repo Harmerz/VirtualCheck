@@ -9,13 +9,17 @@ using System.Threading.Tasks;
 
 namespace userForm
 {
-    internal class Dokter
+    public class Dokter
     {
         private int _idDokter;
-        private char[] _nameDokter;
-        private char[] _usernameDokter;
-        private char[] _passwordDokter;
-        private char[] _tempatDokter;
+        private string _nameDokter;
+        private string _usernameDokter;
+        private string _passwordDokter;
+        private string _specialistDokter;
+        private string _kotaDokter;
+        private string _provinsiDokter;
+        private string _hospitalDokter;
+        private string _dayDokter;
         private List<string> _jadwalDokter = new List<string>();
 
         private NpgsqlConnection conn;
@@ -29,34 +33,60 @@ namespace userForm
 
         public static NpgsqlCommand cmd;
         private string sql = null;
-        public int IDDokter { 
+        public int IDDokter
+        {
             get { return _idDokter; }
-            set { _idDokter = value;}
+            set { _idDokter = value; }
         }
 
-        public char[] NameDokter { 
-            get { return _nameDokter;}
-            set { _nameDokter = value; }   
+        public string NameDokter
+        {
+            get { return _nameDokter; }
+            set { _nameDokter = value; }
         }
 
-        public char[] UsernameDokter { 
+        public string UsernameDokter
+        {
             get { return _usernameDokter; }
             set { _usernameDokter = value; }
         }
-        public char[] PasswordDokter { 
-            get { return _passwordDokter; } 
-            set { _usernameDokter= value; }
-        }
-        public char[] TempatDokter
+
+        public string PasswordDokter
         {
-            get { return _tempatDokter; }
-            set { _tempatDokter = value; }
+            get { return _passwordDokter; }
+            set { _passwordDokter = value; }
         }
-        public List<string> JadwalDokter
+
+        public string SpecialistDokter
         {
-            get { return _jadwalDokter; }
-            set { _jadwalDokter = value; }
+            get { return _specialistDokter; }
+            set { _specialistDokter = value; }
         }
+
+        public string KotaDokter
+        {
+            get { return _kotaDokter; }
+            set { _kotaDokter = value; }
+        }
+
+        public string ProvinsiDokter
+        {
+            get { return _provinsiDokter; }
+            set { _provinsiDokter = value; }
+        }
+
+        public string HospitalDokter
+        {
+            get { return _hospitalDokter; }
+            set { _hospitalDokter = value; }
+        }
+
+        public string DayDokter
+        {
+            get { return _dayDokter; }
+            set { _dayDokter = value; }
+        }
+
 
         public int LoginDokter(string username, string password)
         {
