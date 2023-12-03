@@ -48,6 +48,12 @@ namespace userForm
             }
 
         }
+        private void back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormAwal formAwal = new FormAwal();
+            formAwal.Show();
+        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -65,12 +71,7 @@ namespace userForm
 
         }
 
-        private void back_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            FormAwal formAwal = new FormAwal();
-            formAwal.Show();
-        }
+       
     }
 
 }
