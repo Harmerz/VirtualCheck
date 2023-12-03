@@ -28,59 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
             btnLogOutAdmin = new Button();
             label4 = new Label();
             pictureBox1 = new PictureBox();
             label7 = new Label();
+            dgvDataPasien = new DataGridView();
+            dgvDataDokter = new DataGridView();
+            btnPasien = new Button();
+            btnDokter = new Button();
+            label1 = new Label();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDataPasien).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDataDokter).BeginInit();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(474, 297);
-            button1.Name = "button1";
-            button1.Size = new Size(299, 82);
-            button1.TabIndex = 1;
-            button1.Text = "Data Pasien";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(474, 426);
-            button2.Name = "button2";
-            button2.Size = new Size(299, 82);
-            button2.TabIndex = 2;
-            button2.Text = "Data Dokter";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(474, 556);
-            button3.Name = "button3";
-            button3.Size = new Size(299, 82);
-            button3.TabIndex = 3;
-            button3.Text = "Data Klinik";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(474, 680);
-            button4.Name = "button4";
-            button4.Size = new Size(299, 82);
-            button4.TabIndex = 4;
-            button4.Text = "Data Booking";
-            button4.UseVisualStyleBackColor = true;
             // 
             // btnLogOutAdmin
             // 
             btnLogOutAdmin.BackColor = Color.Firebrick;
             btnLogOutAdmin.Font = new Font("Segoe UI", 16.125F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogOutAdmin.ForeColor = Color.White;
-            btnLogOutAdmin.Location = new Point(474, 811);
+            btnLogOutAdmin.Location = new Point(1393, 990);
             btnLogOutAdmin.Name = "btnLogOutAdmin";
             btnLogOutAdmin.Size = new Size(299, 135);
             btnLogOutAdmin.TabIndex = 5;
@@ -115,43 +83,120 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(493, 163);
+            label7.Location = new Point(1427, 17);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
             label7.Size = new Size(265, 57);
             label7.TabIndex = 29;
             label7.Text = "Admin Page";
             label7.TextAlign = ContentAlignment.TopCenter;
+            label7.Click += label7_Click;
+            // 
+            // dgvDataPasien
+            // 
+            dgvDataPasien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDataPasien.Location = new Point(362, 211);
+            dgvDataPasien.Name = "dgvDataPasien";
+            dgvDataPasien.RowHeadersWidth = 82;
+            dgvDataPasien.RowTemplate.Height = 41;
+            dgvDataPasien.Size = new Size(1330, 300);
+            dgvDataPasien.TabIndex = 30;
+            // 
+            // dgvDataDokter
+            // 
+            dgvDataDokter.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDataDokter.Location = new Point(362, 621);
+            dgvDataDokter.Name = "dgvDataDokter";
+            dgvDataDokter.RowHeadersWidth = 82;
+            dgvDataDokter.RowTemplate.Height = 41;
+            dgvDataDokter.Size = new Size(1330, 300);
+            dgvDataDokter.TabIndex = 31;
+            // 
+            // btnPasien
+            // 
+            btnPasien.BackColor = Color.Firebrick;
+            btnPasien.Font = new Font("Segoe UI", 16.125F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPasien.ForeColor = Color.White;
+            btnPasien.Location = new Point(28, 376);
+            btnPasien.Name = "btnPasien";
+            btnPasien.Size = new Size(299, 135);
+            btnPasien.TabIndex = 32;
+            btnPasien.Text = "Load Data";
+            btnPasien.UseVisualStyleBackColor = false;
+            btnPasien.Click += btnPasien_Click;
+            // 
+            // btnDokter
+            // 
+            btnDokter.BackColor = Color.Firebrick;
+            btnDokter.Font = new Font("Segoe UI", 16.125F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDokter.ForeColor = Color.White;
+            btnDokter.Location = new Point(28, 786);
+            btnDokter.Name = "btnDokter";
+            btnDokter.Size = new Size(299, 135);
+            btnDokter.TabIndex = 33;
+            btnDokter.Text = "Load Data";
+            btnDokter.UseVisualStyleBackColor = false;
+            btnDokter.Click += btnDokter_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(28, 211);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(256, 57);
+            label1.TabIndex = 34;
+            label1.Text = "Data Pasien";
+            label1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(28, 621);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(266, 57);
+            label2.TabIndex = 35;
+            label2.Text = "Data Dokter";
+            label2.TextAlign = ContentAlignment.TopCenter;
             // 
             // FormAdmin
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1260, 1065);
+            ClientSize = new Size(1725, 1158);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(btnDokter);
+            Controls.Add(btnPasien);
+            Controls.Add(dgvDataDokter);
+            Controls.Add(dgvDataPasien);
             Controls.Add(label7);
             Controls.Add(label4);
             Controls.Add(pictureBox1);
             Controls.Add(btnLogOutAdmin);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
             Name = "FormAdmin";
             Text = "FormAdmin";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDataPasien).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDataDokter).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
         private Button btnLogOutAdmin;
         private Label label4;
         private PictureBox pictureBox1;
         private Label label7;
+        private DataGridView dgvDataPasien;
+        private DataGridView dgvDataDokter;
+        private Button btnPasien;
+        private Button btnDokter;
+        private Label label1;
+        private Label label2;
     }
 }
