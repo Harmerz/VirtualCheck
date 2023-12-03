@@ -33,5 +33,10 @@ namespace userForm
             FormLogin formLogin = new FormLogin();
             formLogin.Show();
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

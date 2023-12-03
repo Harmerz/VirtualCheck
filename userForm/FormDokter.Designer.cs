@@ -28,70 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label2 = new Label();
-            textBox1 = new TextBox();
-            label3 = new Label();
-            textBox2 = new TextBox();
             btnLogOutDokter = new Button();
             pictureBox5 = new PictureBox();
             label4 = new Label();
             pictureBox1 = new PictureBox();
             label7 = new Label();
             pictureBox4 = new PictureBox();
+            dataGridView1 = new DataGridView();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(288, 205);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(233, 45);
-            label2.TabIndex = 1;
-            label2.Text = "Keluhan Pasien";
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = SystemColors.Control;
-            textBox1.Location = new Point(563, 205);
-            textBox1.Margin = new Padding(4, 2, 4, 2);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(800, 435);
-            textBox1.TabIndex = 2;
-            textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(288, 704);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(184, 45);
-            label3.TabIndex = 3;
-            label3.Text = "Data Pasien";
-            // 
-            // textBox2
-            // 
-            textBox2.BackColor = SystemColors.Control;
-            textBox2.Location = new Point(563, 698);
-            textBox2.Margin = new Padding(4, 2, 4, 2);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(800, 200);
-            textBox2.TabIndex = 4;
             // 
             // btnLogOutDokter
             // 
             btnLogOutDokter.BackColor = Color.Firebrick;
             btnLogOutDokter.Font = new Font("Segoe UI", 16.125F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogOutDokter.ForeColor = Color.White;
-            btnLogOutDokter.Location = new Point(1074, 962);
+            btnLogOutDokter.Location = new Point(1154, 964);
             btnLogOutDokter.Margin = new Padding(4, 2, 4, 2);
             btnLogOutDokter.Name = "btnLogOutDokter";
             btnLogOutDokter.Size = new Size(289, 138);
@@ -103,10 +59,10 @@
             // pictureBox5
             // 
             pictureBox5.Image = Properties.Resources.Hiasan_1;
-            pictureBox5.Location = new Point(1122, -23);
+            pictureBox5.Location = new Point(1187, -23);
             pictureBox5.Margin = new Padding(6);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(499, 356);
+            pictureBox5.Size = new Size(434, 300);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 13;
             pictureBox5.TabStop = false;
@@ -138,13 +94,14 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(288, 107);
+            label7.Location = new Point(141, 385);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(365, 57);
+            label7.Size = new Size(292, 57);
             label7.TabIndex = 28;
-            label7.Text = "Konsultasi Pasien";
-            label7.TextAlign = ContentAlignment.TopCenter;
+            label7.Text = "Patients' Lists";
+            label7.TextAlign = ContentAlignment.MiddleLeft;
+            label7.Click += label7_Click;
             // 
             // pictureBox4
             // 
@@ -157,21 +114,42 @@
             pictureBox4.TabIndex = 29;
             pictureBox4.TabStop = false;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(141, 469);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 82;
+            dataGridView1.RowTemplate.Height = 41;
+            dataGridView1.Size = new Size(1302, 429);
+            dataGridView1.TabIndex = 30;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Firebrick;
+            button1.Font = new Font("Segoe UI", 16.125F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(1154, 304);
+            button1.Margin = new Padding(4, 2, 4, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(289, 138);
+            button1.TabIndex = 31;
+            button1.Text = "Done";
+            button1.UseVisualStyleBackColor = false;
+            // 
             // FormDokter
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1582, 1175);
+            Controls.Add(button1);
+            Controls.Add(dataGridView1);
             Controls.Add(label7);
             Controls.Add(label4);
             Controls.Add(pictureBox1);
-            Controls.Add(textBox1);
             Controls.Add(pictureBox5);
             Controls.Add(btnLogOutDokter);
-            Controls.Add(textBox2);
-            Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(pictureBox4);
             Margin = new Padding(4, 2, 4, 2);
             Name = "FormDokter";
@@ -179,20 +157,19 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Label label2;
-        private TextBox textBox1;
-        private Label label3;
-        private TextBox textBox2;
         private Button btnLogOutDokter;
         private PictureBox pictureBox5;
         private Label label4;
         private PictureBox pictureBox1;
         private Label label7;
         private PictureBox pictureBox4;
+        private DataGridView dataGridView1;
+        private Button button1;
     }
 }
