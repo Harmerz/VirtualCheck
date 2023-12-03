@@ -163,7 +163,37 @@ namespace userForm
             }
         }
 
+        private void btnCreateDokter_Click(object sender, EventArgs e)
+        {
+            Dokter dokter = new Dokter();
+            FormAddDoctor formAddDoctor = new FormAddDoctor(dokter);
+            this.Close();
+            formAddDoctor.ShowDialog();
+        }
+
+        private void btnUpdateDokter_Click(object sender, EventArgs e)
+        {
+            if (r == null)
+            {
+                MessageBox.Show("Mohon pilih baris data yang akan diUpdate", "Warning!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            Dokter dokter = new Dokter();
+            dokter.IDDokter = int.Parse(r.Cells["_id"].Value.ToString());
+            dokter.NameDokter = r.Cells["_nama"].Value.ToString();
+            dokter.UsernameDokter = r.Cells["_username"].Value.ToString();
+            dokter.PasswordDokter = r.Cells["_password"].Value.ToString();
+            dokter.HospitalDokter = r.Cells["_rs"].Value.ToString();
+            dokter.KotaDokter = r.Cells["_kota"].Value.ToString();
+            dokter.ProvinsiDokter = r.Cells["_provinsi"].Value.ToString();
+            dokter.SpecialistDokter = r.Cells["_spesialis"].Value.ToString();
+            dokter.DayDokter = r.Cells["_day"].Value.ToString();
 
 
+            FormAddDoctor formAddDoctor = new FormAddDoctor(dokter);
+            this.Close();
+            formAddDoctor.ShowDialog();
+        }
     }
 }

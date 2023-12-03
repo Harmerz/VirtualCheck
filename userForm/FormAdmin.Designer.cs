@@ -40,6 +40,8 @@
             label2 = new Label();
             btnDeletePasien = new Button();
             btnDeleteDokter = new Button();
+            btnUpdateDokter = new Button();
+            btnCreateDokter = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvDataPasien).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvDataDokter).BeginInit();
@@ -50,9 +52,10 @@
             btnLogOutAdmin.BackColor = Color.Firebrick;
             btnLogOutAdmin.Font = new Font("Segoe UI", 16.125F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogOutAdmin.ForeColor = Color.White;
-            btnLogOutAdmin.Location = new Point(1393, 990);
+            btnLogOutAdmin.Location = new Point(750, 482);
+            btnLogOutAdmin.Margin = new Padding(2, 1, 2, 1);
             btnLogOutAdmin.Name = "btnLogOutAdmin";
-            btnLogOutAdmin.Size = new Size(299, 135);
+            btnLogOutAdmin.Size = new Size(161, 63);
             btnLogOutAdmin.TabIndex = 5;
             btnLogOutAdmin.Text = "Log Out";
             btnLogOutAdmin.UseVisualStyleBackColor = false;
@@ -62,10 +65,10 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Black", 16.125F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(141, 15);
-            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Location = new Point(76, 7);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(293, 59);
+            label4.Size = new Size(151, 30);
             label4.TabIndex = 16;
             label4.Text = "VirtualCheck";
             // 
@@ -73,10 +76,9 @@
             // 
             pictureBox1.ErrorImage = null;
             pictureBox1.Image = Properties.Resources.VC2;
-            pictureBox1.Location = new Point(15, 15);
-            pictureBox1.Margin = new Padding(6);
+            pictureBox1.Location = new Point(8, 7);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(117, 79);
+            pictureBox1.Size = new Size(63, 37);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 17;
             pictureBox1.TabStop = false;
@@ -85,10 +87,10 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(1427, 17);
-            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Location = new Point(768, 8);
+            label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(265, 57);
+            label7.Size = new Size(132, 30);
             label7.TabIndex = 29;
             label7.Text = "Admin Page";
             label7.TextAlign = ContentAlignment.TopCenter;
@@ -96,22 +98,24 @@
             // dgvDataPasien
             // 
             dgvDataPasien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDataPasien.Location = new Point(362, 211);
+            dgvDataPasien.Location = new Point(195, 99);
+            dgvDataPasien.Margin = new Padding(2, 1, 2, 1);
             dgvDataPasien.Name = "dgvDataPasien";
             dgvDataPasien.RowHeadersWidth = 82;
             dgvDataPasien.RowTemplate.Height = 41;
-            dgvDataPasien.Size = new Size(1330, 300);
+            dgvDataPasien.Size = new Size(716, 141);
             dgvDataPasien.TabIndex = 30;
             dgvDataPasien.CellClick += dgvDataPasien_CellClick;
             // 
             // dgvDataDokter
             // 
             dgvDataDokter.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDataDokter.Location = new Point(362, 621);
+            dgvDataDokter.Location = new Point(195, 291);
+            dgvDataDokter.Margin = new Padding(2, 1, 2, 1);
             dgvDataDokter.Name = "dgvDataDokter";
             dgvDataDokter.RowHeadersWidth = 82;
             dgvDataDokter.RowTemplate.Height = 41;
-            dgvDataDokter.Size = new Size(1330, 300);
+            dgvDataDokter.Size = new Size(716, 189);
             dgvDataDokter.TabIndex = 31;
             dgvDataDokter.CellClick += dgvDataDokter_CellClick;
             // 
@@ -120,9 +124,10 @@
             btnPasien.BackColor = Color.Firebrick;
             btnPasien.Font = new Font("Segoe UI", 13.875F, FontStyle.Bold, GraphicsUnit.Point);
             btnPasien.ForeColor = Color.White;
-            btnPasien.Location = new Point(28, 434);
+            btnPasien.Location = new Point(15, 203);
+            btnPasien.Margin = new Padding(2, 1, 2, 1);
             btnPasien.Name = "btnPasien";
-            btnPasien.Size = new Size(299, 77);
+            btnPasien.Size = new Size(161, 36);
             btnPasien.TabIndex = 32;
             btnPasien.Text = "Load Data";
             btnPasien.UseVisualStyleBackColor = false;
@@ -133,9 +138,10 @@
             btnDokter.BackColor = Color.Firebrick;
             btnDokter.Font = new Font("Segoe UI", 13.875F, FontStyle.Bold, GraphicsUnit.Point);
             btnDokter.ForeColor = Color.White;
-            btnDokter.Location = new Point(28, 844);
+            btnDokter.Location = new Point(15, 369);
+            btnDokter.Margin = new Padding(2, 1, 2, 1);
             btnDokter.Name = "btnDokter";
-            btnDokter.Size = new Size(299, 77);
+            btnDokter.Size = new Size(161, 36);
             btnDokter.TabIndex = 33;
             btnDokter.Text = "Load Data";
             btnDokter.UseVisualStyleBackColor = false;
@@ -145,10 +151,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(28, 211);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(15, 99);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(256, 57);
+            label1.Size = new Size(126, 30);
             label1.TabIndex = 34;
             label1.Text = "Data Pasien";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -157,10 +163,10 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(28, 621);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(15, 291);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(266, 57);
+            label2.Size = new Size(131, 30);
             label2.TabIndex = 35;
             label2.Text = "Data Dokter";
             label2.TextAlign = ContentAlignment.TopCenter;
@@ -170,9 +176,10 @@
             btnDeletePasien.BackColor = Color.Firebrick;
             btnDeletePasien.Font = new Font("Segoe UI", 13.875F, FontStyle.Bold, GraphicsUnit.Point);
             btnDeletePasien.ForeColor = Color.White;
-            btnDeletePasien.Location = new Point(28, 351);
+            btnDeletePasien.Location = new Point(15, 165);
+            btnDeletePasien.Margin = new Padding(2, 1, 2, 1);
             btnDeletePasien.Name = "btnDeletePasien";
-            btnDeletePasien.Size = new Size(299, 77);
+            btnDeletePasien.Size = new Size(161, 36);
             btnDeletePasien.TabIndex = 36;
             btnDeletePasien.Text = "Delete";
             btnDeletePasien.UseVisualStyleBackColor = false;
@@ -183,20 +190,51 @@
             btnDeleteDokter.BackColor = Color.Firebrick;
             btnDeleteDokter.Font = new Font("Segoe UI", 13.875F, FontStyle.Bold, GraphicsUnit.Point);
             btnDeleteDokter.ForeColor = Color.White;
-            btnDeleteDokter.Location = new Point(28, 761);
+            btnDeleteDokter.Location = new Point(15, 444);
+            btnDeleteDokter.Margin = new Padding(2, 1, 2, 1);
             btnDeleteDokter.Name = "btnDeleteDokter";
-            btnDeleteDokter.Size = new Size(299, 77);
+            btnDeleteDokter.Size = new Size(161, 36);
             btnDeleteDokter.TabIndex = 37;
             btnDeleteDokter.Text = "Delete";
             btnDeleteDokter.UseVisualStyleBackColor = false;
             btnDeleteDokter.Click += btnDeleteDokter_Click;
             // 
+            // btnUpdateDokter
+            // 
+            btnUpdateDokter.BackColor = Color.Firebrick;
+            btnUpdateDokter.Font = new Font("Segoe UI", 13.875F, FontStyle.Bold, GraphicsUnit.Point);
+            btnUpdateDokter.ForeColor = Color.White;
+            btnUpdateDokter.Location = new Point(15, 406);
+            btnUpdateDokter.Margin = new Padding(2, 1, 2, 1);
+            btnUpdateDokter.Name = "btnUpdateDokter";
+            btnUpdateDokter.Size = new Size(161, 36);
+            btnUpdateDokter.TabIndex = 38;
+            btnUpdateDokter.Text = "Update";
+            btnUpdateDokter.UseVisualStyleBackColor = false;
+            btnUpdateDokter.Click += btnUpdateDokter_Click;
+            // 
+            // btnCreateDokter
+            // 
+            btnCreateDokter.BackColor = Color.Firebrick;
+            btnCreateDokter.Font = new Font("Segoe UI", 13.875F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCreateDokter.ForeColor = Color.White;
+            btnCreateDokter.Location = new Point(15, 331);
+            btnCreateDokter.Margin = new Padding(2, 1, 2, 1);
+            btnCreateDokter.Name = "btnCreateDokter";
+            btnCreateDokter.Size = new Size(161, 36);
+            btnCreateDokter.TabIndex = 39;
+            btnCreateDokter.Text = "Create";
+            btnCreateDokter.UseVisualStyleBackColor = false;
+            btnCreateDokter.Click += btnCreateDokter_Click;
+            // 
             // FormAdmin
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1725, 1158);
+            ClientSize = new Size(929, 553);
+            Controls.Add(btnCreateDokter);
+            Controls.Add(btnUpdateDokter);
             Controls.Add(btnDeleteDokter);
             Controls.Add(btnDeletePasien);
             Controls.Add(label2);
@@ -209,6 +247,7 @@
             Controls.Add(label4);
             Controls.Add(pictureBox1);
             Controls.Add(btnLogOutAdmin);
+            Margin = new Padding(2, 1, 2, 1);
             Name = "FormAdmin";
             Text = "FormAdmin";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -231,5 +270,7 @@
         private Label label2;
         private Button btnDeletePasien;
         private Button btnDeleteDokter;
+        private Button btnUpdateDokter;
+        private Button btnCreateDokter;
     }
 }
