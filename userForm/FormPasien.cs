@@ -56,17 +56,17 @@ namespace userForm
                 return;
             }
 
-            if (cbKelamin.Text == "Laki-laki")
+            if (cbKelamin.Text == "Male")
             {
                 pasien.sexPasien = true;
             }
-            else if (cbKelamin.Text == "Perempuan")
+            else if (cbKelamin.Text == "Female")
             {
                 pasien.sexPasien = false;
             }
             else
             {
-                MessageBox.Show("Invalid gender input. Please select 'Laki-laki' or 'Perempuan'.");
+                MessageBox.Show("Invalid gender input. Please select 'Male' or 'Female'.");
                 return;
             }
             pasien.AdressPasien = txtAlamat.Text;

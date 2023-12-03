@@ -29,7 +29,7 @@ namespace userForm
                     Close();
                     FormAdmin formAdmin = new();
                     formAdmin.Show();
-                } else 
+                } else if (Role != "-1")
                 {
                     Close();
                     FormDokter formDokter = new FormDokter(Role);

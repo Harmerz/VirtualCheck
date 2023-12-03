@@ -1,10 +1,7 @@
 ﻿using Npgsql;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace userForm
 {
@@ -18,11 +15,11 @@ namespace userForm
         string connstring = ConfigurationManager.AppSettings["connstring"];
 
         private NpgsqlConnection conn;
+
         public Admin()
         {
             conn = new NpgsqlConnection(connstring);
         }
-
 
         public static NpgsqlCommand cmd;
         private string sql = null;
@@ -43,18 +40,20 @@ namespace userForm
             get { return _usernameAdmin; }
             set { _usernameAdmin = value; }
         }
+
         public string PasswordAdmin
         {
             get { return _passwordAdmin; }
             set { _usernameAdmin = value; }
         }
+
         public char[] TempatAdmin
         {
             get { return _tempatAdmin; }
             set { _tempatAdmin = value; }
         }
 
-        public Boolean LoginAdmin(string username, string password)
+        public bool LoginAdmin(string username, string password)
         {
             if (username == null || password == null)
             {
@@ -73,12 +72,10 @@ namespace userForm
 
                 if (count == 1)
                 {
+                    MessageBox.Show($"Login admin success, welcome {username}", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return true;
                 }
-                else
-                {
-                    return false;
-                }
+             
             }
             catch (Exception ex)
             {
@@ -91,7 +88,5 @@ namespace userForm
 
             return false;
         }
-
-
     }
 }
