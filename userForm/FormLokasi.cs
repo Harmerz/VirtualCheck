@@ -16,12 +16,14 @@ namespace userForm
     public partial class FormLokasi : Form
     {
         private Pasien _pasien;
+        private Booking booking;
         public FormLokasi(Pasien pasien)
         {
             InitializeComponent();
             conn = new NpgsqlConnection(connstring);
             _pasien = pasien;
             SetupProvinceAutocomplete();
+            booking = new Booking();
         }
         private NpgsqlConnection conn;
         string connstring = ConfigurationManager.AppSettings["connstring"];
@@ -38,9 +40,7 @@ namespace userForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string message = $"Name: {_pasien.NamePasien}\nAddress: {_pasien.AdressPasien}\nGender: {_pasien.sexPasien}\nPhone: {_pasien.TelpPasien}\nAge: {_pasien.AgePasien}\nComplaint: {_pasien.KeluhanPasien}\nState: {txtProvince.Text}\nDistrict: {cbDistric.Text}\nHospital: {cbHospital.Text}";
             string id = "";
-            MessageBox.Show(message, "Collected Data");
 
             string selectedHospital = cbHospital.Text;
             string selectedDistric = cbDistric.Text;
@@ -56,7 +56,6 @@ namespace userForm
                     conn.Open();
 
                     string idQuery = $"SELECT DISTINCT id FROM doctor WHERE rs ILIKE '{selectedHospital}' AND kota ILIKE '{selectedDistric}' AND spesialis ILIKE '{selectedSpesialis}' AND nama ILIKE '{selectedDoctor}' AND day ILIKE '{selectedDay}'";
-                    MessageBox.Show(idQuery);
                     using (NpgsqlCommand command = new NpgsqlCommand(idQuery, conn))
                     {
                         using (NpgsqlDataReader reader = command.ExecuteReader())
@@ -109,10 +108,16 @@ namespace userForm
 
                     if (rowsAffected > 0)
                     {
+                        booking.NamePasien = _pasien.NamePasien;
+                        booking.Keluhan = _pasien.KeluhanPasien;
+                        booking.NameDokter = cbDoctor.Text;
+                        booking.Day = cbDays.Text;
+                        booking.Hospital = cbHospital.Text;
+                        Appoiment appoiment = new Appoiment(booking);
 
                         conn.Close();
                         this.Close();
-
+                        appoiment.Show();
                     }
                     else
                     {

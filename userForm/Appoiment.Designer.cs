@@ -255,6 +255,7 @@
             button1.TabIndex = 59;
             button1.Text = "OKE";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // txtKeluhan
             // 

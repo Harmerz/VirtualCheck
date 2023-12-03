@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace userForm
 {
-    internal class Booking
+    public class Booking
     {
         private string _namePasien;
         private string _nameDokter;
@@ -33,7 +33,7 @@ namespace userForm
             set { _keluhan = value; }
         }
 
-        public string Tempat
+        public string Hospital
         {
             get { return _hospital; }
             set { _hospital = value; }

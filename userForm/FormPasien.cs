@@ -74,7 +74,7 @@ namespace userForm
             pasien.TelpPasien = txtTelp.Text;
             FormLokasi formLokasi = new FormLokasi(pasien);
             this.Close();
-            formLokasi.ShowDialog();
+            formLokasi.Show();
         }
 
         private void cbKelamin_SelectedIndexChanged(object sender, EventArgs e)
