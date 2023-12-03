@@ -49,13 +49,13 @@ namespace userForm
             string selectedDay = cbDays.Text;
 
 
-            if (!string.IsNullOrEmpty(selectedHospital) && !string.IsNullOrEmpty(selectedDistric) && !string.IsNullOrEmpty(selectedSpesialis) && !string.IsNullOrEmpty(selectedDoctor) && !string.IsNullOrEmpty(selectedDay))
+            if (!string.IsNullOrEmpty(selectedHospital) && !string.IsNullOrEmpty(selectedDistric) && !string.IsNullOrEmpty(selectedSpesialis) && !string.IsNullOrEmpty(selectedDoctor))
             {
                 try
                 {
                     conn.Open();
 
-                    string idQuery = $"SELECT DISTINCT id FROM doctor WHERE rs ILIKE '{selectedHospital}' AND kota ILIKE '{selectedDistric}' AND spesialis ILIKE '{selectedSpesialis}' AND nama ILIKE '{selectedDoctor}' AND day ILIKE '{selectedDay}'";
+                    string idQuery = $"SELECT DISTINCT id FROM doctor WHERE rs ILIKE '{selectedHospital}' AND kota ILIKE '{selectedDistric}' AND spesialis ILIKE '{selectedSpesialis}' AND nama ILIKE '{selectedDoctor}'";
                     using (NpgsqlCommand command = new NpgsqlCommand(idQuery, conn))
                     {
                         using (NpgsqlDataReader reader = command.ExecuteReader())
@@ -361,14 +361,12 @@ namespace userForm
             }
         }
 
-
         private void cbDoctor_TextChange(object sender, EventArgs e)
         {
             string selectedHospital = cbHospital.Text;
             string selectedDistric = cbDistric.Text;
             string selectedSpesialis = cbSpesialis.Text;
             string selectedDoctor = cbDoctor.Text;
-
 
             if (!string.IsNullOrEmpty(selectedHospital) && !string.IsNullOrEmpty(selectedDistric) && !string.IsNullOrEmpty(selectedSpesialis) && !string.IsNullOrEmpty(selectedDoctor))
             {
@@ -385,16 +383,20 @@ namespace userForm
 
                             while (dayReader.Read())
                             {
-                                string day = dayReader["day"].ToString();
-                                dayList.Add(day);
+                                string days = dayReader["day"].ToString();
+                                string[] dayArray = days.Split(',');
+                                dayArray = dayArray.Select(day => day.Trim()).ToArray();
+
+                                dayList.AddRange(dayArray);
                             }
 
+                            dayList = new List<string>(new HashSet<string>(dayList));
                             cbDays.Items.Clear();
                             cbDays.Items.AddRange(dayList.ToArray());
 
                             if (dayList.Count == 0)
                             {
-                                MessageBox.Show("No matching day's found for the selected Doctor.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("No matching days found for the selected Doctor.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                     }
@@ -410,11 +412,17 @@ namespace userForm
             }
         }
 
+
         private void back_Click(object sender, EventArgs e)
         {
             FormPasien formPasien = new FormPasien();
             this.Close();
             formPasien.ShowDialog();
+        }
+
+        private void cbDays_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

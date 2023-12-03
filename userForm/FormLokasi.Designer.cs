@@ -118,7 +118,7 @@
             pictureBox6.ErrorImage = null;
             pictureBox6.Image = Properties.Resources.VC2;
             pictureBox6.Location = new Point(22, 26);
-            pictureBox6.Margin = new Padding(6, 6, 6, 6);
+            pictureBox6.Margin = new Padding(6);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(117, 79);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -129,7 +129,7 @@
             // 
             pictureBox1.Image = Properties.Resources.hospitallocation;
             pictureBox1.Location = new Point(22, 117);
-            pictureBox1.Margin = new Padding(6, 6, 6, 6);
+            pictureBox1.Margin = new Padding(6);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(836, 1150);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -140,7 +140,7 @@
             // 
             pictureBox3.Image = Properties.Resources.Hiasan_3;
             pictureBox3.Location = new Point(-13, 1233);
-            pictureBox3.Margin = new Padding(6, 6, 6, 6);
+            pictureBox3.Margin = new Padding(6);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(492, 416);
             pictureBox3.TabIndex = 24;
@@ -151,7 +151,7 @@
             pictureBox2.ErrorImage = Properties.Resources.Hiasan_4;
             pictureBox2.Image = Properties.Resources.Hiasan_4;
             pictureBox2.Location = new Point(1059, 855);
-            pictureBox2.Margin = new Padding(6, 6, 6, 6);
+            pictureBox2.Margin = new Padding(6);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(585, 612);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -162,7 +162,7 @@
             // 
             pictureBox4.Image = Properties.Resources.Hiasan_1;
             pictureBox4.Location = new Point(1326, -28);
-            pictureBox4.Margin = new Padding(6, 6, 6, 6);
+            pictureBox4.Margin = new Padding(6);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(262, 247);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -173,7 +173,7 @@
             // 
             pictureBox5.Image = Properties.Resources.Hiasan_2;
             pictureBox5.Location = new Point(1387, 348);
-            pictureBox5.Margin = new Padding(6, 6, 6, 6);
+            pictureBox5.Margin = new Padding(6);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(282, 393);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -214,7 +214,7 @@
             txtProvince.BackColor = SystemColors.Control;
             txtProvince.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtProvince.Location = new Point(923, 273);
-            txtProvince.Margin = new Padding(6, 6, 6, 6);
+            txtProvince.Margin = new Padding(6);
             txtProvince.Name = "txtProvince";
             txtProvince.Size = new Size(528, 50);
             txtProvince.TabIndex = 29;
@@ -225,7 +225,7 @@
             cbDoctor.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbDoctor.FormattingEnabled = true;
             cbDoctor.Location = new Point(923, 781);
-            cbDoctor.Margin = new Padding(6, 6, 6, 6);
+            cbDoctor.Margin = new Padding(6);
             cbDoctor.Name = "cbDoctor";
             cbDoctor.Size = new Size(528, 53);
             cbDoctor.TabIndex = 6;
@@ -237,7 +237,7 @@
             cbHospital.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbHospital.FormattingEnabled = true;
             cbHospital.Location = new Point(923, 529);
-            cbHospital.Margin = new Padding(6, 6, 6, 6);
+            cbHospital.Margin = new Padding(6);
             cbHospital.Name = "cbHospital";
             cbHospital.Size = new Size(528, 53);
             cbHospital.TabIndex = 4;
@@ -249,7 +249,7 @@
             cbDistric.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbDistric.FormattingEnabled = true;
             cbDistric.Location = new Point(923, 403);
-            cbDistric.Margin = new Padding(6, 6, 6, 6);
+            cbDistric.Margin = new Padding(6);
             cbDistric.Name = "cbDistric";
             cbDistric.Size = new Size(528, 53);
             cbDistric.TabIndex = 2;
@@ -273,10 +273,11 @@
             cbDays.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbDays.FormattingEnabled = true;
             cbDays.Location = new Point(923, 926);
-            cbDays.Margin = new Padding(6, 6, 6, 6);
+            cbDays.Margin = new Padding(6);
             cbDays.Name = "cbDays";
             cbDays.Size = new Size(528, 53);
             cbDays.TabIndex = 30;
+            cbDays.SelectedIndexChanged += cbDays_SelectedIndexChanged;
             // 
             // label5
             // 
@@ -295,7 +296,7 @@
             cbSpesialis.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbSpesialis.FormattingEnabled = true;
             cbSpesialis.Location = new Point(923, 661);
-            cbSpesialis.Margin = new Padding(6, 6, 6, 6);
+            cbSpesialis.Margin = new Padding(6);
             cbSpesialis.Name = "cbSpesialis";
             cbSpesialis.Size = new Size(528, 53);
             cbSpesialis.TabIndex = 32;
@@ -344,7 +345,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox5);
-            Margin = new Padding(6, 6, 6, 6);
+            Margin = new Padding(6);
             Name = "FormLokasi";
             Text = "FormLokasi";
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
