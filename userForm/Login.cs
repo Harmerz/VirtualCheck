@@ -16,11 +16,11 @@ namespace userForm
             {
                 return "Please Fill the Blank";
             }
-            if (Admin.LoginAdmin(username, password))
+            if (admin.LoginAdmin(username, password))
             {
                 return "Admin";
             }
-            else if(Dokter.LoginDokter(username, password))
+            else if(dokter.LoginDokter(username, password))
             {
                 return "Dokter";
             }

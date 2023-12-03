@@ -21,7 +21,7 @@ namespace userForm
             _pasien = pasien;
         }
         private NpgsqlConnection conn;
-        string connstring = "Host=20.205.32.88;Port=5432;Username=postgres;Database=junpro_virtualcheck";
+        string connstring = "";
 
         public DataTable dt;
         public static NpgsqlCommand cmd;

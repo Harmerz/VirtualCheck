@@ -24,7 +24,6 @@ namespace userForm
 
             if (Role == "Admin" || Role == "Dokter")
             {
-                MessageBox.Show("Masuk bro");
                 if (Role == "Dokter")
                 {
                     Close();

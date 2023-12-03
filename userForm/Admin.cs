@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,17 @@ namespace userForm
         private string _usernameAdmin;
         private string _passwordAdmin;
         private char[] _tempatAdmin;
+
+        private NpgsqlConnection conn;
+        private const string connstring = "";
+        public Admin()
+        {
+            conn = new NpgsqlConnection(connstring);
+        }
+
+
+        public static NpgsqlCommand cmd;
+        private string sql = null;
 
         public int IDAdmin
         {
@@ -41,16 +53,41 @@ namespace userForm
             set { _tempatAdmin = value; }
         }
 
-        public static Boolean LoginAdmin(string username, string password)
+        public Boolean LoginAdmin(string username, string password)
         {
             if (username == null || password == null)
             {
                 return false;
             }
-            // Dummy Data
-            if (username == "Admin1" && password == "Password1") return true;
-            if (username == "Admin2" && password == "Password2") return true;
-            if (username == "Admin3" && password == "Password3") return true;
+
+            try
+            {
+                conn.Open();
+                sql = "SELECT COUNT(*) FROM admin WHERE username = @username AND password = @password";
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                if (count == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
             return false;
         }
 

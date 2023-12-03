@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +17,16 @@ namespace userForm
         private char[] _tempatDokter;
         private List<string> _jadwalDokter = new List<string>();
 
+        private NpgsqlConnection conn;
+        private const string connstring = "";
+        public Dokter()
+        {
+            conn = new NpgsqlConnection(connstring);
+        }
+
+
+        public static NpgsqlCommand cmd;
+        private string sql = null;
         public int IDDokter { 
             get { return _idDokter; }
         }
@@ -43,18 +55,48 @@ namespace userForm
             set { _jadwalDokter = value; }
         }
 
-        public static Boolean LoginDokter(string username, string password)
+        public bool LoginDokter(string username, string password)
         {
             if (username == null || password == null)
             {
                 return false;
             }
-            // Dummy Data
-            if (username == "Dokter1" && password == "Password1") return true;
-            if (username == "Dokter2" && password == "Password2") return true;
-            if (username == "Dokter3" && password == "Password3") return true;
+
+            try
+            {
+                conn.Open();
+                sql = "SELECT nama FROM doctor WHERE username=@username AND password=@password";
+                cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+
+                object result = cmd.ExecuteScalar();
+
+                if (result != null)
+                {
+                    string doctorName = result.ToString();
+                    MessageBox.Show($"Welcome, {doctorName}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Wrong username or password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+
             return false;
         }
+
 
         public void AddJadwal(string jadwal)
         {
