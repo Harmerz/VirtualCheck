@@ -124,6 +124,7 @@
             dgvData.RowTemplate.Height = 41;
             dgvData.Size = new Size(1302, 429);
             dgvData.TabIndex = 30;
+            dgvData.CellClick += dgvData_CellClick;
             // 
             // button1
             // 

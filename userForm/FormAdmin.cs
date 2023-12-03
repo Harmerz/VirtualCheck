@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -16,11 +17,11 @@ namespace userForm
         public FormAdmin()
         {
             InitializeComponent();
-            conn = new NpgsqlConnection();
+            conn = new NpgsqlConnection(connstring);
         }
 
         private NpgsqlConnection conn;
-
+        string connstring = ConfigurationManager.AppSettings["connstring"];
         public DataTable dt;
         public static NpgsqlCommand cmd;
         private string sql = null;
@@ -31,11 +32,6 @@ namespace userForm
             this.Close();
             FormLogin formLogin = new FormLogin();
             formLogin.Show();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnPasien_Click(object sender, EventArgs e)
@@ -79,5 +75,7 @@ namespace userForm
                 MessageBox.Show("Error: " + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
     }
 }

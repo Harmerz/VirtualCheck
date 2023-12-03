@@ -90,7 +90,6 @@
             label7.TabIndex = 29;
             label7.Text = "Admin Page";
             label7.TextAlign = ContentAlignment.TopCenter;
-            label7.Click += label7_Click;
             // 
             // dgvDataPasien
             // 
