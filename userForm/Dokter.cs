@@ -31,6 +31,7 @@ namespace userForm
         private string sql = null;
         public int IDDokter { 
             get { return _idDokter; }
+            set { _idDokter = value;}
         }
 
         public char[] NameDokter { 
@@ -67,23 +68,25 @@ namespace userForm
             try
             {
                 conn.Open();
-                sql = "SELECT nama FROM doctor WHERE username=@username AND password=@password";
+                sql = "SELECT nama, id FROM doctor WHERE username=@username AND password=@password";
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd.Parameters.AddWithValue("@password", password);
 
-                object result = cmd.ExecuteScalar();
-
-                if (result != null)
+                using (NpgsqlDataReader reader = cmd.ExecuteReader())
                 {
-                    string doctorName = result.ToString();
-                    MessageBox.Show($"Welcome, {doctorName}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return true;
-                }
-                else
-                {
-                    MessageBox.Show("Wrong username or password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
+                    if (reader.Read())
+                    {
+                        string doctorName = reader["nama"].ToString();
+                        int IDDokter = int.Parse(reader["id"].ToString());
+                        MessageBox.Show($"Welcome, {doctorName}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wrong username or password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
                 }
             }
             catch (Exception ex)
