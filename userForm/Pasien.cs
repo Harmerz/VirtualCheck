@@ -6,22 +6,24 @@ using System.Threading.Tasks;
 
 namespace userForm
 {
-    internal class Pasien
+    public class Pasien
     {
         private int _idPasien;
-        private char[] _namePasien;
+        private string _namePasien;
         private int _agePasien;
         private string _addressPasien;
         private bool _sexPasien;
         private string _telpPasien;
         private string _keluhan;
 
+
         public int IDPasien
         {
             get { return _idPasien; }
+            set { _idPasien = value; }
         }
 
-        public char[] NamePasien
+        public string NamePasien
         {
             get { return _namePasien; }
             set { _namePasien = value; }
@@ -55,7 +57,7 @@ namespace userForm
             set { _keluhan = value; }
         }
 
-        public Pasien(int idPasien, char[] namaPasien, int agePasien, string addressPasien, bool sexPasien, string telpPasien, string keluhan)
+        public Pasien(int idPasien, string namaPasien, int agePasien, string addressPasien, bool sexPasien, string telpPasien, string keluhan)
         {
             _idPasien = idPasien;
             _namePasien = namaPasien;
@@ -66,7 +68,11 @@ namespace userForm
             _keluhan = keluhan;
         }
 
-        public void mengisiDataPasien(int idPasien, char[] namaPasien, int agePasien, string addressPasien, bool sexPasien, string telpPasien, string keluhan)
+        public Pasien()
+        {
+        }
+
+        public void mengisiDataPasien(int idPasien, string namaPasien, int agePasien, string addressPasien, bool sexPasien, string telpPasien, string keluhan)
         {
             _idPasien = idPasien;
             _namePasien = namaPasien;
@@ -77,7 +83,7 @@ namespace userForm
             _keluhan = keluhan;
         }
 
-        public void editDataPasien(char[] namaPasien, int agePasien, string addressPasien, bool sexPasien, string telpPasien, string keluhan)
+        public void editDataPasien(string namaPasien, int agePasien, string addressPasien, bool sexPasien, string telpPasien, string keluhan)
         {
             _namePasien = namaPasien;
             _agePasien = agePasien;

@@ -7,14 +7,16 @@ namespace userForm
 {
     public partial class FormPasien : Form
     {
+        private Pasien pasien;
         public FormPasien()
         {
             InitializeComponent();
             conn = new NpgsqlConnection(connstring);
+            pasien = new Pasien();
         }
 
         private NpgsqlConnection conn;
-        string connstring = "Host=20.205.32.88;Port=5432;Username=postgres;Database=junpro_virtualcheck";
+        string connstring = "";
 
         public DataTable dt;
         public static NpgsqlCommand cmd;
@@ -40,33 +42,39 @@ namespace userForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            pasien.NamePasien = txtNama.Text;
+            // Convert txtUmur.Text to an integer
+            int age;
+            if (int.TryParse(txtUmur.Text, out age))
             {
-                conn.Open();
-                sql = @"select * from insert_pasien(:_name, :_age, :_address, :_sex, :_telp, :_keluhan)";
-                cmd = new NpgsqlCommand(sql, conn);
-                Boolean sex = cbKelamin.Text == "Laki-laki";
-                cmd.Parameters.AddWithValue("_name", txtNama.Text);
-                cmd.Parameters.AddWithValue("_age", int.Parse(txtUmur.Text));
-                cmd.Parameters.AddWithValue("_address", txtAlamat.Text);
-                cmd.Parameters.AddWithValue("_sex", sex);
-                cmd.Parameters.AddWithValue("_telp", txtTelp.Text);
-                cmd.Parameters.AddWithValue("_keluhan", txtKeluhan.Text);
-                if ((int)cmd.ExecuteScalar() == 1)
-                {
-                    MessageBox.Show("Data Users Berhasil diinputkan", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    conn.Close();
-                    txtNama.Text = txtUmur.Text = txtAlamat.Text = txtTelp.Text = txtKeluhan.Text = null;
-                }
-                else
-                {
-                    MessageBox.Show("Data gagal di inputkan", "We Are Sorry", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                pasien.AgePasien = age;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message, "Insert FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid age input. Please enter a valid number.");
+                return; // Or set a default value, e.g., pasien.AgePasien = 0;
             }
+
+            // Convert cbKelamin.Text to a boolean
+            if (cbKelamin.Text == "Laki-laki")
+            {
+                pasien.sexPasien = true;
+            }
+            else if (cbKelamin.Text == "Perempuan")
+            {
+                pasien.sexPasien = false;
+            }
+            else
+            {
+                MessageBox.Show("Invalid gender input. Please select 'Laki-laki' or 'Perempuan'.");
+                return; // Or set a default value, e.g., pasien.SexPasien = false;
+            }
+            pasien.AdressPasien = txtAlamat.Text;
+            pasien.KeluhanPasien = txtKeluhan.Text;
+            pasien.TelpPasien = txtTelp.Text;
+            FormLokasi formLokasi = new FormLokasi(pasien);
+            this.Close();
+            formLokasi.ShowDialog();
         }
 
         private void cbKelamin_SelectedIndexChanged(object sender, EventArgs e)
