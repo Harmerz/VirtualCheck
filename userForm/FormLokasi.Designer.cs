@@ -49,6 +49,7 @@
             cbDays = new ComboBox();
             label5 = new Label();
             cbSpesialis = new ComboBox();
+            back = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -282,12 +283,27 @@
             cbSpesialis.TabIndex = 32;
             cbSpesialis.TextChanged += cbSpesialis_TextChange;
             // 
+            // back
+            // 
+            back.AutoSize = true;
+            back.BackColor = Color.White;
+            back.Cursor = Cursors.Hand;
+            back.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            back.ForeColor = Color.Firebrick;
+            back.Location = new Point(164, 587);
+            back.Name = "back";
+            back.Size = new Size(44, 21);
+            back.TabIndex = 34;
+            back.Text = "Back";
+            back.Click += back_Click;
+            // 
             // FormLokasi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(846, 639);
+            Controls.Add(back);
             Controls.Add(label5);
             Controls.Add(cbSpesialis);
             Controls.Add(label1);
@@ -343,5 +359,6 @@
         private ComboBox cbDays;
         private Label label5;
         private ComboBox cbSpesialis;
+        private Label back;
     }
 }

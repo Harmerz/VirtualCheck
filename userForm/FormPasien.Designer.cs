@@ -49,6 +49,7 @@
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
+            back = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -290,12 +291,27 @@
             pictureBox5.TabIndex = 22;
             pictureBox5.TabStop = false;
             // 
+            // back
+            // 
+            back.AutoSize = true;
+            back.BackColor = Color.White;
+            back.Cursor = Cursors.Hand;
+            back.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            back.ForeColor = Color.Firebrick;
+            back.Location = new Point(169, 583);
+            back.Name = "back";
+            back.Size = new Size(44, 21);
+            back.TabIndex = 23;
+            back.Text = "Back";
+            back.Click += back_Click;
+            // 
             // FormPasien
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(846, 639);
+            Controls.Add(back);
             Controls.Add(pictureBox3);
             Controls.Add(label8);
             Controls.Add(pictureBox6);
@@ -354,5 +370,6 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
+        private Label back;
     }
 }

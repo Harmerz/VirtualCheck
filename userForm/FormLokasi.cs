@@ -410,7 +410,11 @@ namespace userForm
             }
         }
 
-
-
+        private void back_Click(object sender, EventArgs e)
+        {
+            FormPasien formPasien = new FormPasien();
+            this.Close();
+            formPasien.ShowDialog();
+        }
     }
 }

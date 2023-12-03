@@ -53,7 +53,7 @@ namespace userForm
             else
             {
                 MessageBox.Show("Invalid age input. Please enter a valid number.");
-                return; 
+                return;
             }
 
             if (cbKelamin.Text == "Laki-laki")
@@ -85,6 +85,13 @@ namespace userForm
         private void FormPasien_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            FormAwal formAwal = new FormAwal();
+            this.Close();
+            formAwal.Show();
         }
     }
 }
