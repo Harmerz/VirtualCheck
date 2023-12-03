@@ -34,12 +34,13 @@
             pictureBox1 = new PictureBox();
             label7 = new Label();
             pictureBox4 = new PictureBox();
-            dataGridView1 = new DataGridView();
+            dgvData = new DataGridView();
             button1 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             SuspendLayout();
             // 
             // btnLogOutDokter
@@ -114,15 +115,15 @@
             pictureBox4.TabIndex = 29;
             pictureBox4.TabStop = false;
             // 
-            // dataGridView1
+            // dgvData
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(141, 469);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 82;
-            dataGridView1.RowTemplate.Height = 41;
-            dataGridView1.Size = new Size(1302, 429);
-            dataGridView1.TabIndex = 30;
+            dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvData.Location = new Point(141, 469);
+            dgvData.Name = "dgvData";
+            dgvData.RowHeadersWidth = 82;
+            dgvData.RowTemplate.Height = 41;
+            dgvData.Size = new Size(1302, 429);
+            dgvData.TabIndex = 30;
             // 
             // button1
             // 
@@ -136,6 +137,21 @@
             button1.TabIndex = 31;
             button1.Text = "Done";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Firebrick;
+            button2.Font = new Font("Segoe UI", 16.125F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(841, 304);
+            button2.Margin = new Padding(4, 2, 4, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(289, 138);
+            button2.TabIndex = 32;
+            button2.Text = "Load Data";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // FormDokter
             // 
@@ -143,8 +159,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1582, 1175);
+            Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvData);
             Controls.Add(label7);
             Controls.Add(label4);
             Controls.Add(pictureBox1);
@@ -157,7 +174,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvData).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -169,7 +186,8 @@
         private PictureBox pictureBox1;
         private Label label7;
         private PictureBox pictureBox4;
-        private DataGridView dataGridView1;
+        private DataGridView dgvData;
         private Button button1;
+        private Button button2;
     }
 }
