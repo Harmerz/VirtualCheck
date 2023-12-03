@@ -1,6 +1,7 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,9 +15,9 @@ namespace userForm
         private string _usernameAdmin;
         private string _passwordAdmin;
         private char[] _tempatAdmin;
+        string connstring = ConfigurationManager.AppSettings["connstring"];
 
         private NpgsqlConnection conn;
-        private const string connstring = "";
         public Admin()
         {
             conn = new NpgsqlConnection(connstring);

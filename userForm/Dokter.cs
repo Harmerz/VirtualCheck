@@ -1,6 +1,7 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,8 @@ namespace userForm
         private List<string> _jadwalDokter = new List<string>();
 
         private NpgsqlConnection conn;
-        private const string connstring = "";
+        string connstring = ConfigurationManager.AppSettings["connstring"];
+
         public Dokter()
         {
             conn = new NpgsqlConnection(connstring);

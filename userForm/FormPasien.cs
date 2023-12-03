@@ -1,4 +1,5 @@
 using Npgsql;
+using System.Configuration;
 using System.Data;
 using System.Xml.Linq;
 
@@ -16,7 +17,8 @@ namespace userForm
         }
 
         private NpgsqlConnection conn;
-        string connstring = "";
+        string connstring = ConfigurationManager.AppSettings["connstring"];
+
 
         public DataTable dt;
         public static NpgsqlCommand cmd;
@@ -43,7 +45,6 @@ namespace userForm
         private void button1_Click(object sender, EventArgs e)
         {
             pasien.NamePasien = txtNama.Text;
-            // Convert txtUmur.Text to an integer
             int age;
             if (int.TryParse(txtUmur.Text, out age))
             {
@@ -52,10 +53,9 @@ namespace userForm
             else
             {
                 MessageBox.Show("Invalid age input. Please enter a valid number.");
-                return; // Or set a default value, e.g., pasien.AgePasien = 0;
+                return; 
             }
 
-            // Convert cbKelamin.Text to a boolean
             if (cbKelamin.Text == "Laki-laki")
             {
                 pasien.sexPasien = true;
@@ -67,7 +67,7 @@ namespace userForm
             else
             {
                 MessageBox.Show("Invalid gender input. Please select 'Laki-laki' or 'Perempuan'.");
-                return; // Or set a default value, e.g., pasien.SexPasien = false;
+                return;
             }
             pasien.AdressPasien = txtAlamat.Text;
             pasien.KeluhanPasien = txtKeluhan.Text;
