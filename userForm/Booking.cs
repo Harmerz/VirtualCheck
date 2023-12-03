@@ -8,20 +8,21 @@ namespace userForm
 {
     internal class Booking
     {
-        private char[] _namePasien;
-        private char[] _nameDokter;
+        private string _namePasien;
+        private string _nameDokter;
         private string _keluhan;
-        private string _tempat;
-        private DateTime _waktu;
+        private string _hospital;
+        private string _day;
 
 
-        public char[] NamePasien
+
+        public string NamePasien
         {
             get { return _namePasien; }
             set { _namePasien = value; }
         }
 
-        public char[] NameDokter
+        public string NameDokter
         {
             get { return _nameDokter; }
             set { _nameDokter = value; }
@@ -34,15 +35,16 @@ namespace userForm
 
         public string Tempat
         {
-            get { return _tempat; }
-            set { _tempat = value; }
+            get { return _hospital; }
+            set { _hospital = value; }
         }
 
-        public DateTime Waktu
+        public string Day
         {
-            get { return _waktu; }
-            set { _waktu = value; }
+            get { return _day; }
+            set { _day = value; }
         }
+
 
         public static void listPasien(List<Booking> bookings)
         {
