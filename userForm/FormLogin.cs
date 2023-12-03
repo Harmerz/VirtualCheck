@@ -22,29 +22,23 @@ namespace userForm
         {
             string Role = Login.HandleLogin(textBox1.Text, textBox2.Text);
 
-            if (Role == "Admin" || Role == "Dokter")
-            {
-                if (Role == "Dokter")
-                {
-                    Close();
-                    FormDokter formDokter = new();
-                    formDokter.Show();
-                }
+           
 
                 if (Role == "Admin")
                 {
                     Close();
                     FormAdmin formAdmin = new();
                     formAdmin.Show();
+                } else 
+                {
+                    Close();
+                    FormDokter formDokter = new FormDokter(Role);
+                    formDokter.Show();
                 }
 
-                textBox1.Text = "";
+            textBox1.Text = "";
                 textBox2.Text = "";
-            }
-            else
-            {
-                MessageBox.Show("Gagal bro");
-            }
+
 
         }
         private void back_Click(object sender, EventArgs e)

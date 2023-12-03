@@ -58,11 +58,11 @@ namespace userForm
             set { _jadwalDokter = value; }
         }
 
-        public bool LoginDokter(string username, string password)
+        public int LoginDokter(string username, string password)
         {
             if (username == null || password == null)
             {
-                return false;
+                return -1;
             }
 
             try
@@ -78,14 +78,14 @@ namespace userForm
                     if (reader.Read())
                     {
                         string doctorName = reader["nama"].ToString();
-                        int IDDokter = int.Parse(reader["id"].ToString());
+                        IDDokter = int.Parse(reader["id"].ToString());
                         MessageBox.Show($"Welcome, {doctorName}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return true;
+                        return IDDokter;
                     }
                     else
                     {
                         MessageBox.Show("Wrong username or password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return false;
+                        return -1;
                     }
                 }
             }
@@ -99,7 +99,7 @@ namespace userForm
             }
 
 
-            return false;
+            return -1;
         }
 
 

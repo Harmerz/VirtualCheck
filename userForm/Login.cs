@@ -12,17 +12,19 @@ namespace userForm
         {
             Admin admin = new();
             Dokter dokter = new();
+            bool _admin = admin.LoginAdmin(username, password);
+            int _dokter = dokter.LoginDokter(username, password);
             if (username == null || password == null)
             {
                 return "Please Fill the Blank";
             }
-            if (admin.LoginAdmin(username, password))
+            if (_admin)
             {
                 return "Admin";
             }
-            else if(dokter.LoginDokter(username, password))
+            else if(_dokter != -1)
             {
-                return "Dokter";
+                return _dokter.ToString();
             }
             return "Username or Password is Wrong";
         }
