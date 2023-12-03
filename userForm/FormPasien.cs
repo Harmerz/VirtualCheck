@@ -73,5 +73,10 @@ namespace userForm
         {
 
         }
+
+        private void FormPasien_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

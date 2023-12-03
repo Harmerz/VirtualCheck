@@ -64,6 +64,7 @@
             // button1
             // 
             button1.BackColor = Color.Firebrick;
+            button1.Cursor = Cursors.Hand;
             button1.ForeColor = SystemColors.Control;
             button1.Location = new Point(337, 172);
             button1.Margin = new Padding(2, 1, 2, 1);
@@ -77,6 +78,7 @@
             // button2
             // 
             button2.BackColor = Color.IndianRed;
+            button2.Cursor = Cursors.Hand;
             button2.ForeColor = SystemColors.Control;
             button2.Location = new Point(337, 234);
             button2.Margin = new Padding(2, 1, 2, 1);

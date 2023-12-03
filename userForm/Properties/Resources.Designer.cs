@@ -73,6 +73,36 @@ namespace userForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap appoiment {
+            get {
+                object obj = ResourceManager.GetObject("appoiment", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap appoiment_2 {
+            get {
+                object obj = ResourceManager.GetObject("appoiment 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap appoiment_3 {
+            get {
+                object obj = ResourceManager.GetObject("appoiment 3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap carbon {
             get {
                 object obj = ResourceManager.GetObject("carbon", resourceCulture);
@@ -126,6 +156,26 @@ namespace userForm.Properties {
         internal static System.Drawing.Bitmap Hiasan_3 {
             get {
                 object obj = ResourceManager.GetObject("Hiasan 3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hiasan_4 {
+            get {
+                object obj = ResourceManager.GetObject("Hiasan 4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hospitallocation {
+            get {
+                object obj = ResourceManager.GetObject("hospitallocation", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
