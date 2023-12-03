@@ -38,6 +38,8 @@
             btnDokter = new Button();
             label1 = new Label();
             label2 = new Label();
+            btnDeletePasien = new Button();
+            btnDeleteDokter = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvDataPasien).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvDataDokter).BeginInit();
@@ -100,6 +102,7 @@
             dgvDataPasien.RowTemplate.Height = 41;
             dgvDataPasien.Size = new Size(1330, 300);
             dgvDataPasien.TabIndex = 30;
+            dgvDataPasien.CellClick += dgvDataPasien_CellClick;
             // 
             // dgvDataDokter
             // 
@@ -110,15 +113,16 @@
             dgvDataDokter.RowTemplate.Height = 41;
             dgvDataDokter.Size = new Size(1330, 300);
             dgvDataDokter.TabIndex = 31;
+            dgvDataDokter.CellClick += dgvDataDokter_CellClick;
             // 
             // btnPasien
             // 
             btnPasien.BackColor = Color.Firebrick;
-            btnPasien.Font = new Font("Segoe UI", 16.125F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPasien.Font = new Font("Segoe UI", 13.875F, FontStyle.Bold, GraphicsUnit.Point);
             btnPasien.ForeColor = Color.White;
-            btnPasien.Location = new Point(28, 376);
+            btnPasien.Location = new Point(28, 434);
             btnPasien.Name = "btnPasien";
-            btnPasien.Size = new Size(299, 135);
+            btnPasien.Size = new Size(299, 77);
             btnPasien.TabIndex = 32;
             btnPasien.Text = "Load Data";
             btnPasien.UseVisualStyleBackColor = false;
@@ -127,11 +131,11 @@
             // btnDokter
             // 
             btnDokter.BackColor = Color.Firebrick;
-            btnDokter.Font = new Font("Segoe UI", 16.125F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDokter.Font = new Font("Segoe UI", 13.875F, FontStyle.Bold, GraphicsUnit.Point);
             btnDokter.ForeColor = Color.White;
-            btnDokter.Location = new Point(28, 786);
+            btnDokter.Location = new Point(28, 844);
             btnDokter.Name = "btnDokter";
-            btnDokter.Size = new Size(299, 135);
+            btnDokter.Size = new Size(299, 77);
             btnDokter.TabIndex = 33;
             btnDokter.Text = "Load Data";
             btnDokter.UseVisualStyleBackColor = false;
@@ -161,12 +165,40 @@
             label2.Text = "Data Dokter";
             label2.TextAlign = ContentAlignment.TopCenter;
             // 
+            // btnDeletePasien
+            // 
+            btnDeletePasien.BackColor = Color.Firebrick;
+            btnDeletePasien.Font = new Font("Segoe UI", 13.875F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDeletePasien.ForeColor = Color.White;
+            btnDeletePasien.Location = new Point(28, 351);
+            btnDeletePasien.Name = "btnDeletePasien";
+            btnDeletePasien.Size = new Size(299, 77);
+            btnDeletePasien.TabIndex = 36;
+            btnDeletePasien.Text = "Delete";
+            btnDeletePasien.UseVisualStyleBackColor = false;
+            btnDeletePasien.Click += btnDeletePasien_Click;
+            // 
+            // btnDeleteDokter
+            // 
+            btnDeleteDokter.BackColor = Color.Firebrick;
+            btnDeleteDokter.Font = new Font("Segoe UI", 13.875F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDeleteDokter.ForeColor = Color.White;
+            btnDeleteDokter.Location = new Point(28, 761);
+            btnDeleteDokter.Name = "btnDeleteDokter";
+            btnDeleteDokter.Size = new Size(299, 77);
+            btnDeleteDokter.TabIndex = 37;
+            btnDeleteDokter.Text = "Delete";
+            btnDeleteDokter.UseVisualStyleBackColor = false;
+            btnDeleteDokter.Click += btnDeleteDokter_Click;
+            // 
             // FormAdmin
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1725, 1158);
+            Controls.Add(btnDeleteDokter);
+            Controls.Add(btnDeletePasien);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnDokter);
@@ -197,5 +229,7 @@
         private Button btnDokter;
         private Label label1;
         private Label label2;
+        private Button btnDeletePasien;
+        private Button btnDeleteDokter;
     }
 }
